@@ -31,9 +31,10 @@ const tl1 = gsap.timeline({
     scrollTrigger: {
         trigger: ".article1",
         start: "top top",
-        end: "center top",
-        // scrub: 1,
-        // pin: true,
+        end: "bottom+=50% 50%",
+        scrub: 1,
+        pin: true,
+        pinSpacing: false,
         markers: true,
         // onEnter: anim_start,
         // onLeave: ()=>{console.log('onLeave')},
@@ -60,6 +61,10 @@ tl1.from('.article1 p',{
     y: '100px',
     opacity: '0',
 })
+tl1.to('.article1',{
+    opacity: '0',
+})
+
 
 const tl2 = gsap.timeline({
     scrollTrigger: {
